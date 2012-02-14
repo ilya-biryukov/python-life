@@ -6,3 +6,11 @@ This project is to
 2) learn the good way of building a simple GUI app in Python
 3) see if python is good for prototyping an app(maybe try rewriting in c++ later to see if it's simpler when having a python prototype)
 4) see if I could learn how to make an easily extensible life game implementation, so that adding a third dimension to the game would be easy
+
+What is done:
+1) An implementation of the game with standard rules
+2) Some kind of console output, it's ok for debugging
+
+What is on the map:
+1) A gui presenter
+2) 3d
