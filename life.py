@@ -36,10 +36,15 @@ def main():
   field.set_cell((0,0), True)
   field.set_cell((0,1), True)
   field.set_cell((1,2), True)
+  field.set_cell((2,0), True)
+  field.set_cell((2,1), True)
+  field.set_cell((1,3), True)
+  field.set_cell((0,4), True)
+  field.set_cell((2,4), True)
 
   # Run an engine
   engine = GameEngine(next_generation_std, field, print_field)
-  engine.run_until_true(IterativeStopRule(10))
+  engine.run_until_true(IterativeStopRule(6))
 
 
 if __name__ == "__main__":
