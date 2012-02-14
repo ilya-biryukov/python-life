@@ -38,9 +38,16 @@ class StandardField(object):
     :returns: generator that yields all cell's neighbors' coordinates.
     """
 
-    for row in xrange(cell_coord[0] - 1, cell_coord[0] + 2):
-      for col in xrange(cell_coord[1] - 1, cell_coord[0] + 2):
-        if row < 0 or row >= self._rows or col < 0 or col >= self._cols:
+    cell_row, cell_col = cell_coord
+
+    def is_valid_neighbor(row, col):
+      return row >= 0 and row < self._rows \
+        and col >= 0 and col < self._cols \
+        and (row != cell_row or col != cell_col)
+
+    for row in xrange(cell_row - 1, cell_row + 2):
+      for col in xrange(cell_col - 1, cell_col + 2):
+        if not is_valid_neighbor(row, col):
           continue
         yield (row, col)
 
