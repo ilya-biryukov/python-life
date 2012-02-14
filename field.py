@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 class StandardField(object):
   """A standard 2-dimensional field.
   Each point is either occupied or not, so it's represented by a Boolean value """

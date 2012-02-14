@@ -13,10 +13,10 @@ def main():
   """
 
   def print_field(field):
-  """ Prints the field to console window.
-  :field: a field to be printed.
-  :returns: None.
-  """
+    """ Prints the field to console window.
+    :field: a field to be printed.
+    :returns: None.
+    """
     sys.stdout.write("== State ==\n")
     last_row = 0
     for coord in field.cells_coords():

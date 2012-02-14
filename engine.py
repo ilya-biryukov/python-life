@@ -47,11 +47,11 @@ class GameEngine(object):
       field = self._current_field
 
       def neighbors_value(coord):
-      """ Accepts a coordinate of the cell and yields the values of it's neighbors.
+        """ Accepts a coordinate of the cell and yields the values of it's neighbors.
 
-      :coord: the coordinate of the cell, which neighbors should be yielded.
-      :returns: generator yielding the values of the cell's neighbors.
-      """
+        :coord: the coordinate of the cell, which neighbors should be yielded.
+        :returns: generator yielding the values of the cell's neighbors.
+        """
         for cell_coord in field.neighbors_coords(coord):
           yield field.get_cell(cell_coord)
 
@@ -89,12 +89,12 @@ class GameEngine(object):
 
 
   def run_until_true(self, stop_predicate):
-  """
-    Runs iterations of the game until stop_predicate(field) returns True.
-    :stop_predicate: a callable that is called before each iteration of the game, if it returns
-      True the game will stop, otherwise it will continue.
-    :returns: None.
-  """
+    """
+      Runs iterations of the game until stop_predicate(field) returns True.
+      :stop_predicate: a callable that is called before each iteration of the game, if it returns
+        True the game will stop, otherwise it will continue.
+      :returns: None.
+    """
     # Show the initial state
     self._presenter(self._state.current_field)
 
